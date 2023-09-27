@@ -9,6 +9,12 @@ export default function Textform(props) {
         setText(newText);
     }
 
+    const handleClearClick = () => {
+      //console.log("Uppercase was clicked");
+      let newText = "";
+      setText(newText);
+  }
+
     const handleLoClick = () => {
       //console.log("Uppercase was clicked");
       let newText = text.toLowerCase();
@@ -34,8 +40,9 @@ export default function Textform(props) {
         <textarea className="form-control" placeholder="Enter Your Text Here" value={text} onChange={handleOnChange} id="myBox" rows="5" /> 
     </div>
     
-    <button  className="btn btn-primary mx-2" onClick={handleUpClick} >Convert to UPPERCASE</button>
-    <button  className="btn btn-primary" onClick={handleLoClick} >Convert to Lowercase</button>
+    <button  className="btn btn-primary mx-1" onClick={handleUpClick} >Convert to UPPERCASE</button>
+    <button  className="btn btn-primary mx-1" onClick={handleClearClick} >Clear</button>
+    <button  className="btn btn-primary mx-1" onClick={handleLoClick} >Convert to Lowercase</button>
   </div>
 
   <div className="container my-3" >
