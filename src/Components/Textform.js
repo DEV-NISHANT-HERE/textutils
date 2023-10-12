@@ -66,19 +66,18 @@ const handleExtraSpaces = () => {
        value={text} onChange={handleOnChange} id="myBox" rows="5" /> 
     </div>
     
-    <button  className="btn btn-primary mx-1" onClick={handleUpClick} >Convert to UPPERCASE</button>
-    <button  className="btn btn-primary mx-1" onClick={handleClearClick} >Clear</button>
-    <button  className="btn btn-primary mx-1" onClick={handleLoClick} >Convert to Lowercase</button>
-    <button  className="btn btn-primary mx-1" onClick={handleCopy} >Copy to Clipboard</button>
-    <button  className="btn btn-primary mx-1" onClick={handleExtraSpaces} >Remove Extra Spaces</button>
+    <button  className="btn btn-primary mx-1 my-1" onClick={handleUpClick} >Convert to UPPERCASE</button>
+    <button  className="btn btn-primary mx-1 my-1" onClick={handleClearClick} >Clear</button>
+    <button  className="btn btn-primary mx-1 my-1" onClick={handleLoClick} >Convert to Lowercase</button>
+    <button  className="btn btn-primary mx-1 my-1" onClick={handleCopy} >Copy to Clipboard</button>
+    <button  className="btn btn-primary mx-1 my-1" onClick={handleExtraSpaces} >Remove Extra Spaces</button>
   </div>
 
   <div className="container my-3" >
     <h2> Your Text Summary</h2>
-    <p> {text.split(" ").length-1} Words  {text.length} Characters</p>
-    <p>{(0.01)*text.split(" ").length} Minutes read</p>
+    <p> {text.split(" ").length-1} Words  {text.length} Characters and {(0.01)*text.split(" ").length} Minutes read</p>
     <h2>Preview</h2>
-    <p>{text.length>0 ? text : "Enter Something in the textbox to preview here"}</p>
+    <p>{text.length>0 ? text : "................................"}</p>
   </div>
       </div>
 
