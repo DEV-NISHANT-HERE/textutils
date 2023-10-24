@@ -10,7 +10,7 @@ export default function About(props) {
     // const [btntext, setBtnTxt] = useState("Enable Dark Mode")
     
     useEffect(() =>{
-        if (props.mode == "dark"){
+        if (props.mode === "dark"){
             setMyStyle
             ({
                 color: "white",
@@ -28,7 +28,7 @@ export default function About(props) {
             })
             // setBtnTxt("Enable Dark Mode")
         }
-    });
+    },[props.mode]);
   
 
 
